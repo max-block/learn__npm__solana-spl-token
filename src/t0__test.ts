@@ -6,6 +6,7 @@ async function main() {
     const owner = new PublicKey("CD6To88A4KrApbnDUkHrwpjMY5ufgPpVQzm9rRX5d3ro")
     const pubkey = await Token.getAssociatedTokenAddress(ASSOCIATED_TOKEN_PROGRAM_ID, TOKEN_PROGRAM_ID, mint, owner);
     console.log(pubkey.toBase58())
+    await Token.createAssociatedTokenAccountInstruction()
     // G6GTsFAnYP1PaNc1g36SF4iuEiosfTZZCWWdnCNxxA8d
 }
 
